@@ -1,0 +1,9 @@
+iframe {
+    pointer-events: none; /* Отключает взаимодействие с iframe */
+}
+
+.video {
+    position: relative;
+    width: 40%;
+    margin: auto
+}

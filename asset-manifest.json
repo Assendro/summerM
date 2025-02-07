@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/summerM/static/css/main.482edfc8.css",
+    "main.js": "/summerM/static/js/main.c9f49ec7.js",
+    "reactPlayerYouTube.js": "/summerM/static/js/reactPlayerYouTube.76f9e9fd.chunk.js",
+    "reactPlayerSoundCloud.js": "/summerM/static/js/reactPlayerSoundCloud.84f309ae.chunk.js",
+    "reactPlayerVimeo.js": "/summerM/static/js/reactPlayerVimeo.8ffb1477.chunk.js",
+    "reactPlayerMux.js": "/summerM/static/js/reactPlayerMux.3596e1bf.chunk.js",
+    "reactPlayerFacebook.js": "/summerM/static/js/reactPlayerFacebook.bb5ca4c0.chunk.js",
+    "reactPlayerStreamable.js": "/summerM/static/js/reactPlayerStreamable.9970644a.chunk.js",
+    "reactPlayerWistia.js": "/summerM/static/js/reactPlayerWistia.e5f6c415.chunk.js",
+    "reactPlayerTwitch.js": "/summerM/static/js/reactPlayerTwitch.c4c952c4.chunk.js",
+    "reactPlayerDailyMotion.js": "/summerM/static/js/reactPlayerDailyMotion.66832f59.chunk.js",
+    "reactPlayerMixcloud.js": "/summerM/static/js/reactPlayerMixcloud.fdb8a42b.chunk.js",
+    "reactPlayerVidyard.js": "/summerM/static/js/reactPlayerVidyard.8a5e1c5e.chunk.js",
+    "reactPlayerKaltura.js": "/summerM/static/js/reactPlayerKaltura.0956d944.chunk.js",
+    "reactPlayerFilePlayer.js": "/summerM/static/js/reactPlayerFilePlayer.4d19b3f0.chunk.js",
+    "reactPlayerPreview.js": "/summerM/static/js/reactPlayerPreview.b607ad21.chunk.js",
+    "index.html": "/summerM/index.html",
+    "main.482edfc8.css.map": "/summerM/static/css/main.482edfc8.css.map",
+    "main.c9f49ec7.js.map": "/summerM/static/js/main.c9f49ec7.js.map",
+    "reactPlayerYouTube.76f9e9fd.chunk.js.map": "/summerM/static/js/reactPlayerYouTube.76f9e9fd.chunk.js.map",
+    "reactPlayerSoundCloud.84f309ae.chunk.js.map": "/summerM/static/js/reactPlayerSoundCloud.84f309ae.chunk.js.map",
+    "reactPlayerVimeo.8ffb1477.chunk.js.map": "/summerM/static/js/reactPlayerVimeo.8ffb1477.chunk.js.map",
+    "reactPlayerMux.3596e1bf.chunk.js.map": "/summerM/static/js/reactPlayerMux.3596e1bf.chunk.js.map",
+    "reactPlayerFacebook.bb5ca4c0.chunk.js.map": "/summerM/static/js/reactPlayerFacebook.bb5ca4c0.chunk.js.map",
+    "reactPlayerStreamable.9970644a.chunk.js.map": "/summerM/static/js/reactPlayerStreamable.9970644a.chunk.js.map",
+    "reactPlayerWistia.e5f6c415.chunk.js.map": "/summerM/static/js/reactPlayerWistia.e5f6c415.chunk.js.map",
+    "reactPlayerTwitch.c4c952c4.chunk.js.map": "/summerM/static/js/reactPlayerTwitch.c4c952c4.chunk.js.map",
+    "reactPlayerDailyMotion.66832f59.chunk.js.map": "/summerM/static/js/reactPlayerDailyMotion.66832f59.chunk.js.map",
+    "reactPlayerMixcloud.fdb8a42b.chunk.js.map": "/summerM/static/js/reactPlayerMixcloud.fdb8a42b.chunk.js.map",
+    "reactPlayerVidyard.8a5e1c5e.chunk.js.map": "/summerM/static/js/reactPlayerVidyard.8a5e1c5e.chunk.js.map",
+    "reactPlayerKaltura.0956d944.chunk.js.map": "/summerM/static/js/reactPlayerKaltura.0956d944.chunk.js.map",
+    "reactPlayerFilePlayer.4d19b3f0.chunk.js.map": "/summerM/static/js/reactPlayerFilePlayer.4d19b3f0.chunk.js.map",
+    "reactPlayerPreview.b607ad21.chunk.js.map": "/summerM/static/js/reactPlayerPreview.b607ad21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.482edfc8.css",
+    "static/js/main.c9f49ec7.js"
+  ]
+}

@@ -6,20 +6,20 @@ const Videos = () => {
     return (
         <div className="videos-container">
             <Video 
-                videoUrl='/videos/example1.mp4'
-                thumbnailVideoUrl='/videos/example2.mp4'
+                videoUrl={`${process.env.PUBLIC_URL}/videos/example1.mp4`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/videos/example2.mp4`}
             />
             <Video 
-                videoUrl='/videos/example1.mp4'
-                thumbnailVideoUrl='/videos/example2.mp4'
+                videoUrl={`${process.env.PUBLIC_URL}/videos/example1.mp4`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/videos/example2.mp4`}
             />
             <Video 
-                videoUrl='/videos/example1.mp4'
-                thumbnailVideoUrl='/videos/example2.mp4'
+                videoUrl={`${process.env.PUBLIC_URL}/videos/example1.mp4`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/videos/example2.mp4`}
             />
             <Video 
-                videoUrl='/videos/example1.mp4'
-                thumbnailVideoUrl='/videos/example2.mp4'
+                videoUrl={`${process.env.PUBLIC_URL}/videos/example1.mp4`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/videos/example2.mp4`}
             />
 
         </div>

@@ -1,7 +1,10 @@
 iframe {
     pointer-events: none; /* Отключает взаимодействие с iframe */
 }
-
+video {
+    width: auto;
+    height: auto;
+}
 .video {
     position: relative;
     width: 40%;

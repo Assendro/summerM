@@ -1,9 +1,10 @@
 .header-container {
     position: absolute;
-    top: 37%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 100;
     color: red;
-    left: 38%;
 
     .text-img {
         width: 100%;

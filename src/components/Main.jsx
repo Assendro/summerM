@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Videos from "./Videos";
+import BackgroundMusic from "./BackgroundMusic";
 import './main.scss'
 
 const Main = () => {
@@ -12,6 +13,7 @@ const Main = () => {
             className="container"
             style={bgStyle}
         >
+            <BackgroundMusic />
             <Header />
             <Videos />           
 

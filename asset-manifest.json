@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/summerM/static/css/main.7e55d78e.css",
-    "main.js": "/summerM/static/js/main.88af893a.js",
+    "main.css": "/summerM/static/css/main.097f555f.css",
+    "main.js": "/summerM/static/js/main.aeddbe5b.js",
     "reactPlayerYouTube.js": "/summerM/static/js/reactPlayerYouTube.76f9e9fd.chunk.js",
     "reactPlayerSoundCloud.js": "/summerM/static/js/reactPlayerSoundCloud.84f309ae.chunk.js",
     "reactPlayerVimeo.js": "/summerM/static/js/reactPlayerVimeo.8ffb1477.chunk.js",
@@ -17,8 +17,8 @@
     "reactPlayerFilePlayer.js": "/summerM/static/js/reactPlayerFilePlayer.4d19b3f0.chunk.js",
     "reactPlayerPreview.js": "/summerM/static/js/reactPlayerPreview.b607ad21.chunk.js",
     "index.html": "/summerM/index.html",
-    "main.7e55d78e.css.map": "/summerM/static/css/main.7e55d78e.css.map",
-    "main.88af893a.js.map": "/summerM/static/js/main.88af893a.js.map",
+    "main.097f555f.css.map": "/summerM/static/css/main.097f555f.css.map",
+    "main.aeddbe5b.js.map": "/summerM/static/js/main.aeddbe5b.js.map",
     "reactPlayerYouTube.76f9e9fd.chunk.js.map": "/summerM/static/js/reactPlayerYouTube.76f9e9fd.chunk.js.map",
     "reactPlayerSoundCloud.84f309ae.chunk.js.map": "/summerM/static/js/reactPlayerSoundCloud.84f309ae.chunk.js.map",
     "reactPlayerVimeo.8ffb1477.chunk.js.map": "/summerM/static/js/reactPlayerVimeo.8ffb1477.chunk.js.map",
@@ -35,7 +35,7 @@
     "reactPlayerPreview.b607ad21.chunk.js.map": "/summerM/static/js/reactPlayerPreview.b607ad21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e55d78e.css",
-    "static/js/main.88af893a.js"
+    "static/css/main.097f555f.css",
+    "static/js/main.aeddbe5b.js"
   ]
 }

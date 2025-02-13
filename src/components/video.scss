@@ -1,11 +1,12 @@
 iframe {
     pointer-events: none; /* Отключает взаимодействие с iframe */
 }
-video {
-    width: auto;
+.video {
+    width: 400px;
+    margin: auto;
     height: auto;
 }
-.video {
+.video-container {
     position: relative;
     width: 40%;
     margin: auto

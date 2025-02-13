@@ -6,10 +6,6 @@ import './main.scss'
 const Main = () => {
     const bgStyle = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/img/background.jpg)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        height: '10%',
     }
     return (
         <div 

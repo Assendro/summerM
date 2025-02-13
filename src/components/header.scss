@@ -4,9 +4,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
-    color: red;
+    color: rgb(221, 104, 37);
+    font-size: 50px;
+    text-align: center;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    
 
-    .text-img {
-        width: 100%;
-    }
 }

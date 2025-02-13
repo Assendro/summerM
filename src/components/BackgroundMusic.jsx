@@ -21,9 +21,11 @@ const BackgroundMusic = () => {
             <audio ref={audioRef} loop>
                 <source src={MusicUrl} type="audio/mpeg" />
             </audio>
-            <button onClick={toggleMusic} className='background-music-btn'>
-                {isPlaying ? 'Пауза' : 'Включить музыку'}
-            </button>
+            <img
+                onClick={toggleMusic}
+                className='background-music-btn'
+                src={isPlaying ? `${process.env.PUBLIC_URL}/img/Speaker_Icon.png` : `${process.env.PUBLIC_URL}/img/Mute_Icon.png`}
+            />
 
         </div>
 

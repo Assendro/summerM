@@ -4,10 +4,13 @@ import './header.scss'
 const Header = () => {
     return (
         <div className="header-container">
-            <img src="https://x-lines.ru/letters/i/cyrillicscript/0041/e1af19/60/0/4np7bpqtomemh.png" alt="" />
-            <img src="https://x-lines.ru/letters/i/cyrillicdreamy/1399/e36426/60/0/4nqpbxsto8emiwf14nay.png" alt="" />
+            <img className='text-img' src="https://x-lines.ru/letters/i/cyrillicscript/0041/e17819/40/0/4nppdygosdeadwf74n9pbpgosdeabwcb4n7pbqgozropbqstodembwf3.png" alt="" />
             <br />
-            <img src="https://x-lines.ru/letters/i/cyrillicscript/0086/e1af19/50/0/grhuopjpgrhu1cy.png" alt="" />
+            <img className='text-img' src="https://x-lines.ru/letters/i/cyrillicscript/0041/e17819/40/0/4ntpbpqozueabwcq4n7pdyqozmemtwf3rdeabwfo4nh7bxsozw.png" alt="" />
+            <br />
+            <img className='text-img' src="https://x-lines.ru/letters/i/cyrillicscript/0041/d7b337/40/0/4np7besouaonfwrh4n9pdyqozmemfwfore.png" alt="" />
+            <br />
+            <img className='text-img' src="https://x-lines.ru/letters/i/cyrillicscript/0086/d7b337/40/0/grhuopjpgrhu1cby4n37bc3q.png" alt="" />
         </div>
     )
 }

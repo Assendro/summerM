@@ -1,7 +1,11 @@
 .header-container {
     position: absolute;
-    top: 40%;
+    top: 37%;
     z-index: 100;
     color: red;
-    left: 36%;
+    left: 38%;
+
+    .text-img {
+        width: 100%;
+    }
 }

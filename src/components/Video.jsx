@@ -16,6 +16,11 @@ const Video = ({ videoUrl, thumbnailVideoUrl }) => {
           <div 
               className='video'
           >
+            <div 
+                className="video-border"
+            >
+              <img src={`${process.env.PUBLIC_URL}/img/border.png`} alt="" />
+            </div>
           {!isPlaying ? (
             // Миниатюра с предпросмотром (отдельное видео)
             <ReactPlayer

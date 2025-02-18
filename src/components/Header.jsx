@@ -1,9 +1,12 @@
 import React from 'react';
 import './header.scss'
 
-const Header = () => {
+const Header = ({headerStyle}) => {
     return (
-        <div className="header-container">
+        <div 
+            className="header-container"
+            style={headerStyle}
+        >
             Краснодарский край  <br />
             Темрюкский район <br />
             Винсовхоз "Прогресс" <br />

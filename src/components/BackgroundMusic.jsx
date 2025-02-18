@@ -1,11 +1,20 @@
 import React, { useState, useRef } from 'react';
-import './BackgroundMusic.scss'
+import './backgroundMusic.scss'
 
-const BackgroundMusic = () => {
+const BackgroundMusic = ({startAnimation}) => {
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isStarted, setIsStarted] = useState(false);
     const audioRef = useRef(null);
 
     const MusicUrl = `${process.env.PUBLIC_URL}/music/backgroundMusic.mp3`
+    const handleClick = () => {
+        toggleMusic()
+
+        if (!isStarted) {
+            startAnimation()
+            setIsStarted(!isStarted)
+        }
+    }
 
     const toggleMusic = () => {
         if (isPlaying) {
@@ -22,7 +31,7 @@ const BackgroundMusic = () => {
                 <source src={MusicUrl} type="audio/mpeg" />
             </audio>
             <img
-                onClick={toggleMusic}
+                onClick={handleClick}
                 className='background-music-btn'
                 src={isPlaying ? `${process.env.PUBLIC_URL}/img/Speaker_Icon.png` : `${process.env.PUBLIC_URL}/img/Mute_Icon.png`}
             />

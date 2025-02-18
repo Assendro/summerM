@@ -3,15 +3,17 @@ import ReactPlayer from 'react-player';
 import './video.scss'
 
 
-const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity }) => {
+const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text }) => {
     const [isPlaying, setIsPlaying] = useState(false);
 
-
     return (
-      <div className="video-container">
+      <div
+        className="video-container" 
+        style={videoOpacity}
+      >
           <div 
               className='video'
-              style={videoOpacity}
+              
           >
             <div 
                 className="video-border"
@@ -37,6 +39,7 @@ const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity }) => {
             />
           )}
         </div>
+        <span className='video-text'>{text} </span>
       </div>
     )
 }

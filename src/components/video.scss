@@ -6,6 +6,8 @@ iframe {
     margin: auto;
     height: auto;
     position: relative;
+    opacity: 0;
+    transition: opacity 3s 13s;
     .video-border {
         position: absolute;
         top: -2.5%;

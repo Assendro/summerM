@@ -32,7 +32,6 @@ const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text }) => {
             <ReactPlayer
               width="100%"
               height='100%'
-              background-color='black'
               url={videoUrl}
               playing={true}
               controls={true}

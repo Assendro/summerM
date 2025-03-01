@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import './video.scss'
 
 
-const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text }) => {
+const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text, placeholderOpacity}) => {
     const [isPlaying, setIsPlaying] = useState(false);
 
     return (
@@ -22,7 +22,9 @@ const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text }) => {
           {!isPlaying ? (
             // Миниатюра с предпросмотром (отдельное видео)
             <img
-              
+              style={{
+                opacity: placeholderOpacity
+              }}
               src={thumbnailVideoUrl}
               className='placeholder'
               onClick={() => setIsPlaying(true)} // Начать воспроизведение основного видео

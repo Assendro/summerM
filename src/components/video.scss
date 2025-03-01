@@ -21,6 +21,7 @@ iframe {
         width: 30vw;
         height: 30vh;
         margin: auto;
+        transition: opacity 1s;
     }
 }
 .video-container {
@@ -31,6 +32,7 @@ iframe {
     margin: auto;
     opacity: 0;
     transition: opacity 3s 13s;
+    
 }
 .video-text {
     margin-top: 1vh;

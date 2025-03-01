@@ -1,15 +1,35 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import Video from './Video';
 import './videos.scss'
 
 const Videos = ({videoOpacity}) => {
+    const [placeholderCount, setPlaceholderCount ] = useState(1)
+    const [placeholderOpacity, setplaceholderOpacity] = useState(1); 
+    
+    useEffect(() => {
+        const photoCount = 4;
+        const interval = setInterval(() => {
+            setplaceholderOpacity(0)
+            
+            setTimeout(() => {
+                setPlaceholderCount((prevCount) => (prevCount % photoCount) + 1);
+              }, 1000);
+            setTimeout(() => {
+                setplaceholderOpacity(1)
+              }, 1500);
+        }, 8000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="videos-container">
 
             <Video 
                 videoOpacity = {videoOpacity}
                 videoUrl={`https://eg.okay.com.tr:5002/fbdownload/%D0%9B%D0%A2%D0%9E%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%201%20%D0%BF%D0%BE%D0%B4%D1%8A%D0%B5%D0%BC%2C%20%D0%B7%D0%B0%D1%80%D1%8F%D0%B4%D0%BA%D0%B0%2C%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F.mp4?tid=%222TiAbiyhrSy0E-AFBNssyVg1VPhXA3_QcePOm6F8SWJShPnjRynrbBXYmDyd6G_Kyc2GoNpD5yaKYwYG%22&mode=open&dlink=%222f5075626c69632fd092d0b8d0b4d0b5d0be20d0b3d0bed182d0bed0b2d18bd0b520d184d0b8d0bbd18cd0bcd18b2fd188d0bad0bed0bbd0b0203733392fd09bd0a2d09e20d187d0b0d181d182d18c203120d0bfd0bed0b4d18ad0b5d0bc2c20d0b7d0b0d180d18fd0b4d0bad0b02c20d180d0b0d0b1d0bed182d0b020d0bfd0bed0bbd0bdd0b0d18f20d0b2d0b5d180d181d0b8d18f2e6d7034%22&stdhtml=true&SynoToken=.pd0HirQ0g1tM`}
-                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholder1.jpg`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholders/morning/${placeholderCount}.jpg`}
+                placeholderOpacity={placeholderOpacity}
                 text={
                     <>
                         Утро в лагере
@@ -21,7 +41,8 @@ const Videos = ({videoOpacity}) => {
             <Video 
                 videoOpacity = {videoOpacity}
                 videoUrl={`https://eg.okay.com.tr:5002/fbdownload/%D0%9B%D0%A2%D0%9E%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%202%20%D0%BE%D0%B1%D0%B5%D0%B4%20%D0%BC%D0%BE%D1%80%D0%B5%2C%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%2C%20%D1%8D%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8.mp4?tid=%222TiAbiyhrSy0E-AFBNssyVg1VPhXA3_QcePOm6F8SWJShPnjRynrbBXYmDyd6G_Kyc2GoNpD5yaKYwYG%22&mode=open&dlink=%222f5075626c69632fd092d0b8d0b4d0b5d0be20d0b3d0bed182d0bed0b2d18bd0b520d184d0b8d0bbd18cd0bcd18b2fd188d0bad0bed0bbd0b0203733392fd09bd0a2d09e20d187d0b0d181d182d18c203220d0bed0b1d0b5d0b420d0bcd0bed180d0b52c20d0bed182d0b4d18bd1852c20d18dd0bad181d0bad183d180d181d0b8d0b82e6d7034%22&stdhtml=true&SynoToken=.pd0HirQ0g1tM`}
-                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholder2.jpg`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholders/lunch/${placeholderCount}.jpg`}
+                placeholderOpacity={placeholderOpacity}
                 text={  
                     <>
                         Обед, отдых,
@@ -33,13 +54,15 @@ const Videos = ({videoOpacity}) => {
             <Video 
                 videoOpacity = {videoOpacity}
                 videoUrl={`https://eg.okay.com.tr:5002/fbdownload/%D0%9B%D0%A2%D0%9E%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%203%20%D0%BB%D0%B0%D0%B3%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C.mp4?tid=%222TiAbiyhrSy0E-AFBNssyVg1VPhXA3_QcePOm6F8SWJShPnjRynrbBXYmDyd6G_Kyc2GoNpD5yaKYwYG%22&mode=open&dlink=%222f5075626c69632fd092d0b8d0b4d0b5d0be20d0b3d0bed182d0bed0b2d18bd0b520d184d0b8d0bbd18cd0bcd18b2fd188d0bad0bed0bbd0b0203733392fd09bd0a2d09e20d187d0b0d181d182d18c203320d0bbd0b0d0b3d0b5d180d0bdd0b0d18f20d0b6d0b8d0b7d0bdd18c2e6d7034%22&stdhtml=true&SynoToken=.pd0HirQ0g1tM`}
-                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholder3.jpg`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholders/life/${placeholderCount}.jpg`}
+                placeholderOpacity={placeholderOpacity}
                 text={'Лагерная жизнь'}
             />
             <Video 
                 videoOpacity = {videoOpacity}
                 videoUrl={`${process.env.PUBLIC_URL}/videos/example1.mp4`}
-                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholder4.jpg`}
+                thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholders/teachers/${placeholderCount}.jpg`}
+                placeholderOpacity={placeholderOpacity}
                 text={'Наши педагоги'}
             />
 

@@ -1,5 +1,6 @@
 .header-container {
     position: absolute;
+    width: 80%;
     left: 50%;
     transition: 
         opacity 2s 13s,
@@ -7,7 +8,8 @@
     transform: translate(-50%, -50%);
     z-index: 100;
     color: #cd1313;
-    font-size: 60px;
+    max-height: 100%;
+    font-size: 8vh;
     text-align: center;
     font-family: "Pacifico", serif;
     font-weight: 400;

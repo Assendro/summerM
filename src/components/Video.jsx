@@ -13,7 +13,6 @@ const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text }) => {
       >
           <div 
               className='video'
-              
           >
             <div 
                 className="video-border"
@@ -31,8 +30,9 @@ const Video = ({ videoUrl, thumbnailVideoUrl, videoOpacity, text }) => {
           ) : (
             // Основное видео
             <ReactPlayer
-              width="400px"
-              height='auto'
+              width="100%"
+              height='100%'
+              background-color='black'
               url={videoUrl}
               playing={true}
               controls={true}

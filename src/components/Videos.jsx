@@ -22,7 +22,13 @@ const Videos = ({videoOpacity}) => {
                 videoOpacity = {videoOpacity}
                 videoUrl={`https://eg.okay.com.tr:5002/fbdownload/%D0%9B%D0%A2%D0%9E%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%202%20%D0%BE%D0%B1%D0%B5%D0%B4%20%D0%BC%D0%BE%D1%80%D0%B5%2C%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%2C%20%D1%8D%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8.mp4?tid=%222TiAbiyhrSy0E-AFBNssyVg1VPhXA3_QcePOm6F8SWJShPnjRynrbBXYmDyd6G_Kyc2GoNpD5yaKYwYG%22&mode=open&dlink=%222f5075626c69632fd092d0b8d0b4d0b5d0be20d0b3d0bed182d0bed0b2d18bd0b520d184d0b8d0bbd18cd0bcd18b2fd188d0bad0bed0bbd0b0203733392fd09bd0a2d09e20d187d0b0d181d182d18c203220d0bed0b1d0b5d0b420d0bcd0bed180d0b52c20d0bed182d0b4d18bd1852c20d18dd0bad181d0bad183d180d181d0b8d0b82e6d7034%22&stdhtml=true&SynoToken=.pd0HirQ0g1tM`}
                 thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholder2.jpg`}
-                text={'Обед, отдых, море, поездки'}
+                text={  
+                    <>
+                        Обед, отдых,
+                        <br />
+                        море, поездки
+                    </>
+                }
             />
             <Video 
                 videoOpacity = {videoOpacity}

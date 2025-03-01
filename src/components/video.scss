@@ -2,10 +2,11 @@ iframe {
     pointer-events: none; /* Отключает взаимодействие с iframe */
 }
 .video {
-    width: 400px;
+    width: 30vw;
     margin: auto;
-    height: auto;
+    height: 30vh;
     position: relative;
+    background-color: black;
     .video-border {
         position: absolute;
         top: -2.5%;
@@ -17,8 +18,8 @@ iframe {
 
     }
     .placeholder {
-        width: 400px;
-        height: 225px;
+        width: 30vw;
+        height: 30vh;
         margin: auto;
     }
 }
@@ -32,8 +33,9 @@ iframe {
     transition: opacity 3s 13s;
 }
 .video-text {
-    font-size: 30px;
-    line-height: 40px;
+    margin-top: 1vh;
+    font-size: 4vh;
+    line-height: 4vh;
     text-align: center;
     font-family: "Pacifico", serif;
     font-weight: 400;

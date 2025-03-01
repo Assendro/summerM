@@ -2,11 +2,11 @@ iframe {
     pointer-events: none; /* Отключает взаимодействие с iframe */
 }
 .video {
-    width: 30vw;
+    width: 25vw;
     margin: auto;
     height: 30vh;
     position: relative;
-    background-color: black;
+/*     background-color: black; */
     .video-border {
         position: absolute;
         top: -2.5%;
@@ -18,10 +18,10 @@ iframe {
 
     }
     .placeholder {
-        width: 30vw;
+        width: 25vw;
         height: 30vh;
         margin: auto;
-        transition: opacity 1s;
+        transition: opacity 1s ease-in;
     }
 }
 .video-container {
@@ -48,4 +48,7 @@ iframe {
 .video-border img {
     width: 105%; /* Граница адаптируется к размеру видео */
     height: 105%;
+}
+.react-player {
+    background-color: black;
 }

@@ -19,10 +19,8 @@ const Videos = ({videoOpacity, toggleMusic}) => {
             
             setTimeout(() => {
                 setPlaceholderCount1((prevCount) => (prevCount % photoCount) + 1);
-              }, 1000);
-            setTimeout(() => {
                 setplaceholderOpacity1(1)
-              }, 1100);
+              }, 1000);
             }, 10000);
 
         const interval2 = setInterval(() => {
@@ -32,11 +30,9 @@ const Videos = ({videoOpacity, toggleMusic}) => {
 
             setTimeout(() => {
                 setPlaceholderCount2((prevCount) => (prevCount % photoCount) + 1);
+                setplaceholderOpacity2(1)
               }, 6000);
 
-            setTimeout(() => {
-                setplaceholderOpacity2(1)
-              }, 6100);
             }, 10000);
 
         const interval3 = setInterval(() => {
@@ -46,11 +42,10 @@ const Videos = ({videoOpacity, toggleMusic}) => {
 
             setTimeout(() => {
                 setPlaceholderCount3((prevCount) => (prevCount % photoCount) + 1);
+                setplaceholderOpacity3(1)
               }, 6000);
 
-            setTimeout(() => {
-                setplaceholderOpacity3(1)
-              }, 6100);
+
             }, 10000);
 
         const interval4 = setInterval(() => {

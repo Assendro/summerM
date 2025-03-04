@@ -33,7 +33,6 @@ const Main = () => {
     const toggleMusic = (e) => {
 
         setIsMusicPlaying(e)
-        console.log(e)
     }
 
     return (

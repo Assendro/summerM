@@ -9,36 +9,49 @@ const Main = () => {
         opacity: 0
     })
     const [headerStyle, setHeaderStyle] = useState({
-        top: "-100%",
         opacity: 1
     })
     const bgStyle = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/img/background.jpg)`,
     }
-
+    const [isMusicPlaying, setIsMusicPlaying] = useState(false)
+    const [isStarted, setIsStarted] = useState(false)
+    
+ 
     const startAnimation = () => {
-        setVideoOpacity({
-            opacity: 1
-        })
-        setHeaderStyle({
-            top: "50%",
-            opacity: 0
-        })
+        if (!isStarted) {
+            setVideoOpacity({
+                opacity: 1
+            })
+            setHeaderStyle({
+                opacity: 0
+            })
+            setIsMusicPlaying(true)
+            setIsStarted(true)
+        }        
+    }
+    const toggleMusic = (e) => {
+
+        setIsMusicPlaying(e)
+        console.log(e)
     }
 
     return (
         <div 
             className="container"
             style={bgStyle}
+            onClick={startAnimation}
         >
             <BackgroundMusic 
-                startAnimation={startAnimation}
+                isPlaying={isMusicPlaying}
             />
 
             <Header 
+                startAnimation={startAnimation}
                 headerStyle={headerStyle}
             />
             <Videos
+                toggleMusic={toggleMusic}
                 videoOpacity={videoOpacity}
             />           
 

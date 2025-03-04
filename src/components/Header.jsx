@@ -2,6 +2,7 @@ import React from 'react';
 import './header.scss'
 
 const Header = ({headerStyle}) => {
+
     return (
         <div 
             className="header-container"

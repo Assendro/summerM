@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react';
 import Video from './Video';
 import './videos.scss'
 
-const Videos = ({videoOpacity}) => {
+const Videos = ({videoOpacity, toggleMusic}) => {
     const [placeholderCount1, setPlaceholderCount1 ] = useState(1)
     const [placeholderCount2, setPlaceholderCount2 ] = useState(1)
     const [placeholderCount3, setPlaceholderCount3 ] = useState(1)
@@ -89,6 +89,7 @@ const Videos = ({videoOpacity}) => {
                         зарядка, работа
                     </>
                 }
+                toggleMusic={toggleMusic}
             />
             <Video 
                 videoOpacity = {videoOpacity}
@@ -102,6 +103,7 @@ const Videos = ({videoOpacity}) => {
                         море, поездки
                     </>
                 }
+                toggleMusic={toggleMusic}
             />
             <Video 
                 videoOpacity = {videoOpacity}
@@ -109,6 +111,7 @@ const Videos = ({videoOpacity}) => {
                 thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholders/life/${placeholderCount3}.jpg`}
                 placeholderOpacity={placeholderOpacity3}
                 text={'Лагерная жизнь'}
+                toggleMusic={toggleMusic}
             />
             <Video 
                 videoOpacity = {videoOpacity}
@@ -116,6 +119,7 @@ const Videos = ({videoOpacity}) => {
                 thumbnailVideoUrl={`${process.env.PUBLIC_URL}/img/placeholders/teachers/${placeholderCount4}.jpg`}
                 placeholderOpacity={placeholderOpacity4}
                 text={'Наши педагоги'}
+                toggleMusic={toggleMusic}
             />
 
         </div>

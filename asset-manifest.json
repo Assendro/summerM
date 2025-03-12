@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/summerM/static/css/main.8b8d7c7e.css",
+    "main.css": "/summerM/static/css/main.9233975f.css",
     "main.js": "/summerM/static/js/main.43086dec.js",
     "index.html": "/summerM/index.html",
-    "main.8b8d7c7e.css.map": "/summerM/static/css/main.8b8d7c7e.css.map",
+    "main.9233975f.css.map": "/summerM/static/css/main.9233975f.css.map",
     "main.43086dec.js.map": "/summerM/static/js/main.43086dec.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b8d7c7e.css",
+    "static/css/main.9233975f.css",
     "static/js/main.43086dec.js"
   ]
 }

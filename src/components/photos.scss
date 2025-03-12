@@ -1,0 +1,27 @@
+.photos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .photos-container {
+        margin-top: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+        
+
+    }
+}
+@media (max-height: 480px) {
+    .photos-container {
+        margin-top: 30px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+
+    }
+}

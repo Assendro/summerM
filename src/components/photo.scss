@@ -1,0 +1,111 @@
+iframe {
+    pointer-events: none; /* Отключает взаимодействие с iframe */
+}
+.placeholder-container {
+    position: relative;
+}
+.photo {
+    width: 60%;
+    margin: auto;
+    height: 30vh;
+    position: relative;
+/*     background-color: black; */
+    .photo-border {
+        position: absolute;
+        top: -2.5%;
+        left: -2.5%;
+        width: 100%; 
+        height: 100%;
+        pointer-events: none; 
+        z-index: 10;
+
+    }
+
+}
+.placeholder {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    margin: auto;
+    transition: opacity 1s ease-in;
+}
+.photo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 2s;
+    
+}
+.photo-text {
+    margin-top: 1vh;
+    font-size: 4vh;
+    line-height: 4vh;
+    text-align: center;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    pointer-events: none;
+    color: #cd1313;
+}
+.photo-text__top {
+    margin-bottom: 10px;
+    font-size: 4vh;
+    line-height: 4vh;
+    text-align: center;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    pointer-events: none;
+    color: #6e0fe8;
+}
+.photo-border img {
+    width: 105%; /* Граница адаптируется к размеру видео */
+    height: 105%;
+}
+.react-player {
+    background-color: black;
+}
+@media (max-width: 768px) {
+    .photo-container {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+    .photo-text__top {
+        margin: 10px;
+
+    }
+    .photo {
+        width: 100%;
+    }
+    .placeholder {
+        width: 100%;
+    }
+}
+@media (max-height: 480px) {
+    .photo-container {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+    .photo-text__top {
+        margin: 10px;
+        line-height: 10vh;
+        font-size: 10vh;
+    }
+    .photo-text {
+        line-height: 10vh;
+        font-size: 10vh;
+    }
+    .photo {
+        height: 100vh;
+        width: 100%;
+    }
+    .placeholder-container {
+        height: 100%;
+    }
+    .placeholder {
+        height: 100%;
+    }
+}

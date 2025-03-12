@@ -1,0 +1,112 @@
+
+.video-container {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    height: 100vh;
+}
+.video {
+
+    margin: auto;
+    height: 80vh;
+    position: relative;
+    .video-border {
+        position: absolute;
+        top: -1%;
+        left: -3%;
+        width: 100%; 
+        height: 100%;
+        pointer-events: none; 
+        z-index: 10;
+
+    }
+}
+.video-container2 {
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.video-text__top {
+    margin-bottom: 30px;
+    font-size: 4vh;
+    line-height: 4vh;
+    text-align: center;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    pointer-events: none;
+    color: #6e0fe8;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+.video-text {
+    margin-top: 1vh;
+    font-size: 4vh;
+    line-height: 4vh;
+    text-align: center;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    pointer-events: none;
+    color: #cd1313;
+}
+.video-border img {
+    width: 104%; /* Граница адаптируется к размеру видео */
+    height: 104%;
+}
+@media (max-width: 768px) {
+    .video-text__top {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .video-container2 {
+        height: 100vh;
+    }
+    .container {
+        height: 100%;
+    }
+    video {
+        width: 100%;
+        height: auto;
+    }
+    .video {
+        width: 90%;
+
+        position: relative;
+    }
+}
+@media (max-height: 480px) {
+    .video-text__top {
+        font-size: 10vh;
+        line-height: 10vh;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .video-container2 {
+        margin-top: 20px;
+        height: auto;
+
+    }
+    .container {
+        height: 100%;
+    }
+    video {
+        width: 80%;
+
+    }
+    .video {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 90%;
+        height: auto;
+        position: relative;
+        margin-bottom: 30px;
+    }
+}

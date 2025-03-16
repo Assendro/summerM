@@ -1,0 +1,23 @@
+iframe {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.videoPlayer {
+    width: 90vw;
+    height: 70vh;
+}
+
+@media (max-width: 768px) {
+    .videoPlayer {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+@media (max-height: 480px) {
+    .videoPlayer {
+        width: 90vw;
+        height: 80vh;
+    }
+}

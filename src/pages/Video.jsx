@@ -3,8 +3,10 @@ import Header from "../components/Header";
 import { useNavigate } from 'react-router-dom';
 import Videos from "../components/Photos";
 import './video.scss'
+import VideoPlayer from "../components/VideoPlayer";
 
 const Video = ({src, playMusic, text}) => {
+    const videoId = 'WxLyT1nehAo'
     const videoRef = useRef(null);
     const navigate = useNavigate();
 
@@ -13,29 +15,7 @@ const Video = ({src, playMusic, text}) => {
     }
 
 
-    useEffect(() => {
-       
-        const videoElement = videoRef.current;
-
-        const handleEnded = () => {
-            setTimeout(() => {
-                playMusic(true)
-            }, 1000);
-            navigate(`/summerM`) // Включить музыку, когда видео заканчивается
-        };
-
-        if (videoElement) {
-            videoElement.addEventListener('ended', handleEnded);
-        }
-
-        return () => {
-
-            if (videoElement) {
-                videoElement.addEventListener('ended', handleEnded);
-            }
-        };
-    }, []);
-    
+ 
 
     return (
         <div 
@@ -47,11 +27,11 @@ const Video = ({src, playMusic, text}) => {
                 <span className="video-text__top">{text} </span>
                 <div className='video'>
 
-                    <video 
+                    <VideoPlayer 
+                        playMusic={playMusic}
                         ref={videoRef}
                         src={src}
-                        autoPlay
-                        controls
+                        
                     />
                 </div>
             </div>

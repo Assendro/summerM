@@ -2,13 +2,14 @@ import {React, useState, useEffect} from 'react';
 import Photo from './Photo';
 import './photos.scss'
 
-const Photos = ({photoOpacity, setCurrentVideo, playMusic, isStarted}) => {
+const Photos = ({photoOpacity, setCurrentVideo, playMusic, isStarted, setPage}) => {
 
 
     return (
         <div className="photos-container">
 
             <Photo 
+                setPage={setPage}
                 delay={0}
                 isStarted={isStarted}
                 photoOpacity = {photoOpacity}
@@ -32,6 +33,7 @@ const Photos = ({photoOpacity, setCurrentVideo, playMusic, isStarted}) => {
                 playMusic={playMusic}
             />
             <Photo 
+                setPage={setPage}
                 delay={5000}
                 isStarted={isStarted}
                 photoOpacity = {photoOpacity}
@@ -55,6 +57,7 @@ const Photos = ({photoOpacity, setCurrentVideo, playMusic, isStarted}) => {
                 playMusic={playMusic}
             />
             <Photo 
+                setPage={setPage}
                 delay={5000}
                 isStarted={isStarted}
                 photoOpacity = {photoOpacity}
@@ -72,6 +75,7 @@ const Photos = ({photoOpacity, setCurrentVideo, playMusic, isStarted}) => {
                 playMusic={playMusic}
             />
             <Photo 
+                setPage={setPage}
                 delay={0}
                 isStarted={isStarted}
                 photoOpacity = {photoOpacity}

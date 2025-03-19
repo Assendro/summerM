@@ -1,12 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import './photo.scss'
 
 
-const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, setCurrentVideo, RomanNumeral, isStarted, delay}) => {
+const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, setCurrentVideo, RomanNumeral, isStarted, delay, setPage}) => {
     const playerRef = useRef(null);
-    const navigate = useNavigate();
 
         const [placeholderOpacity, setplaceholderOpacity] = useState([
           1,
@@ -56,7 +54,8 @@ const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, se
       if (isStarted) {
         setCurrentVideo(videoId)
         playMusic(false)
-        navigate(`/video${videoId}`)
+        setPage('video')
+
       }
 
     };

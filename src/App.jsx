@@ -2,22 +2,26 @@ import Main from './pages/Main';
 import Video from './pages/Video';
 import YtVideo from './components/VideoPlayer';
 import {React, useState, useRef, useEffect} from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate  } from 'react-router-dom';
 
 function App() {
-  
   const [photoOpacity, setPhotoOpacity] = useState({
       opacity: 0
   })
+  const [page, setPage] = useState('main')
   const [headerStyle, setHeaderStyle] = useState({
       opacity: 1
   })
   const [isMusicPlaying, setIsMusicPlaying] = useState(false)
-  const [сurrentVideo, setCurrentVideo] = useState(1)
+  const [currentVideo, setCurrentVideo] = useState(0)
   const [isStarted, setIsStarted] = useState(false)
   const audioRef = useRef(null);
   const [abortController, setAbortController] = useState(null);
-
+  const videoSRC = [
+    'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239021&hash=3d35297f17006bbc&autoplay=1',
+    'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239018&hd=2&hash=99a8f1618955d5ed&autoplay=1',
+    'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239019&hd=2&hash=55bb73755994333f&autoplay=1',
+    'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239020&hash=89d1e2195f1f213c&autoplay=1'
+  ]
 
   const startAnimation = () => {
     if (!isStarted) {
@@ -103,13 +107,49 @@ const softVolumeChange = (to, signal, delay) => {
     
 
   }, []);
+
+  let content;
+
+  switch (page) {
+    case 'main':
+        content = <Main 
+                    isStarted={isStarted}
+                    setCurrentVideo={setCurrentVideo} 
+                    startAnimation={startAnimation}
+                    setPage={setPage}
+                    photoOpacity={photoOpacity}
+                    headerStyle={headerStyle}
+                    isMusicPlaying={isMusicPlaying}
+                    start={startAnimation}
+                    setIsMusicPlaying={setIsMusicPlaying}
+                    playMusic={playMusic}
+                  />
+        break;
+    case 'video':
+        content = <Video
+                    setPage={setPage}
+                    text='Утро в лагере зарядка, работа'
+                    src={videoSRC[currentVideo]} 
+                    playMusic={playMusic}
+                  />
+        break;
+    case 'error':
+        content = <p>Произошла ошибка при загрузке данных.</p>;
+        break;
+    default:
+        content = <p>Неизвестный статус.</p>;
+  }
   return (
-    <Router>
-      <audio ref={audioRef} loop >
-        <source src={`${process.env.PUBLIC_URL}/music/backgroundMusic.mp3`} type="audio/mpeg" />
-      </audio>
-        <Routes>
-            <Route path="/summerM" element={<Main 
+      <div>
+        <audio ref={audioRef} loop >
+          <source src={`${process.env.PUBLIC_URL}/music/backgroundMusic.mp3`} type="audio/mpeg" />
+        </audio>
+        {content}
+
+        
+      </div>
+
+/*             <Route path="/summerM" element={<Main 
               isStarted={isStarted}
               setCurrentVideo={setCurrentVideo} 
               startAnimation={startAnimation}
@@ -138,9 +178,7 @@ const softVolumeChange = (to, signal, delay) => {
             <Route path={`/video4`} element={<Video
               text='Наши педагоги'
               src={'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239020&hash=89d1e2195f1f213c&autoplay=1'} 
-            />} />  
-        </Routes>
-    </Router>
+            />} />   */
 
       );
 }

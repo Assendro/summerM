@@ -3,8 +3,7 @@ import ReactPlayer from 'react-player';
 import './photo.scss'
 
 
-const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, setCurrentVideo, RomanNumeral, isStarted, delay, setPage}) => {
-    const playerRef = useRef(null);
+const Photo = ({ videoId, thumbnailPhotoArray, text, setCurrentVideo, RomanNumeral, delay, setPage, setText}) => {
 
         const [placeholderOpacity, setplaceholderOpacity] = useState([
           1,
@@ -51,19 +50,14 @@ const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, se
             }, []);
 
     const handleClick = () => {
-      if (isStarted) {
-        setCurrentVideo(videoId)
-        playMusic(false)
-        setPage('video')
-
-      }
-
+      setCurrentVideo(videoId)
+      setPage('video')
+      setText(text)
     };
 
     return (
       <div
         className="photo-container" 
-        style={photoOpacity}
       >
         <div className="photo-text__top">{`ЧАСТЬ ${RomanNumeral}`}</div>
           <div 
@@ -79,7 +73,7 @@ const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, se
                 }}
                 className='placeholder'
                 src={thumbnailPhotoArray[0]}
-                onClick={handleClick} // Начать воспроизведение основного видео
+                onClick={handleClick} 
               />
               <img
                 style={{
@@ -87,7 +81,7 @@ const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, se
                 }}
                 className='placeholder'
                 src={thumbnailPhotoArray[1]}
-                onClick={handleClick} // Начать воспроизведение основного видео
+                onClick={handleClick} 
               />
               <img
                 style={{
@@ -95,7 +89,7 @@ const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, se
                 }}
                 className='placeholder'
                 src={thumbnailPhotoArray[2]}
-                onClick={handleClick} // Начать воспроизведение основного видео
+                onClick={handleClick} 
               />
               <img
                 style={{
@@ -103,7 +97,7 @@ const Photo = ({ videoId, thumbnailPhotoArray, photoOpacity, text, playMusic, se
                 }}
                 className='placeholder'
                 src={thumbnailPhotoArray[3]}
-                onClick={handleClick} // Начать воспроизведение основного видео
+                onClick={handleClick} 
               />
             </div>
 

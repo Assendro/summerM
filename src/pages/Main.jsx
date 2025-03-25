@@ -1,15 +1,8 @@
 import {React, useState, useEffect} from "react";
-import Header from "../components/Header";
 import Photos from "../components/Photos";
 import './main.scss'
 
-const Main = ({setCurrentVideo, photoOpacity, headerStyle, isMusicPlaying, start, isStarted, playMusic, setPage}) => {
-    useEffect(() => {
-        if (!isMusicPlaying && isStarted) {
-            playMusic(false)
-        }
-        
-    }, [])
+const Main = ({setCurrentVideo, setPage, setText}) => {
     const bgStyle = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/img/background.jpg)`,
     }
@@ -18,19 +11,11 @@ const Main = ({setCurrentVideo, photoOpacity, headerStyle, isMusicPlaying, start
         <div 
             className="container"
             style={bgStyle}
-            onClick={start}
         >
-
-            <Header 
-                startAnimation={start}
-                headerStyle={headerStyle}
-            />
             <Photos
                 setPage={setPage}
-                isStarted={isStarted}
                 setCurrentVideo={setCurrentVideo}
-                photoOpacity={photoOpacity}
-                playMusic={playMusic}
+                setText={setText}
             />           
 
         </div>

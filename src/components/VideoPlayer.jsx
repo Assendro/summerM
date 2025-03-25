@@ -1,40 +1,8 @@
 import {React, useState, useEffect, useRef } from "react";
 import './videoPlayer.scss'
 
-const VideoPlayer = ({src, playMusic}) => {
+const VideoPlayer = ({src}) => {
     const videoRef = useRef(null);
-    
-
-    const findButton = () => {
-        console.log(123)
-        const btn = document.getElementsByClassName('videoplayer_btn_vk_video')
-        console.log(`111${btn}`)
-    }
-
-    useEffect(() => {
-        const videoElement = videoRef.current;
-
-        const handleEnded = () => {
-            setTimeout(() => {
-                playMusic(true)
-            }, 1000);
-        };
-
-        if (videoElement) {
-            videoElement.addEventListener('ended', handleEnded);
-        }
-        if (videoElement) {
-            videoElement.addEventListener('loadeddata', findButton);
-        }
-
-        return () => {
-
-            if (videoElement) {
-                videoElement.addEventListener('ended', handleEnded);
-            }
-        };
-    }, []);
-
 
     return (
         <div>   

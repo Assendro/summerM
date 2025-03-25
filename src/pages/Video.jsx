@@ -3,8 +3,7 @@ import './video.scss'
 import VideoPlayer from "../components/VideoPlayer";
 import BackButton from "../components/BackButton";
 
-const Video = ({src, playMusic, text, setPage}) => {
-    const videoId = 'WxLyT1nehAo'
+const Video = ({src, text, setPage}) => {
     const videoRef = useRef(null);
 
     const bgStyle = {
@@ -28,10 +27,8 @@ const Video = ({src, playMusic, text, setPage}) => {
                 <div className='video'>
 
                     <VideoPlayer 
-                        playMusic={playMusic}
                         ref={videoRef}
                         src={src}
-                        
                     />
                 </div>
             </div>

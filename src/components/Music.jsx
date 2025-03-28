@@ -3,6 +3,7 @@ import './music.scss'
 
 const Music = ({setAudio, audioRef}) => {
     const [hideStatus, setHideStatus] = useState(0)
+    const [buttonText, setButtonText] = useState("Музыка")
     const [page, setPage] = useState('authors')
     const [playStatus, setPlayStatus] = useState(0)
     const [blockWidth, setBlockWidth] = useState(0)
@@ -134,25 +135,35 @@ const Music = ({setAudio, audioRef}) => {
 
 
     const playBtnContent = [<path  d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z" ></path>,<path d="M 12,26 16,26 16,10 12,10 z M 21,26 25,26 25,10 21,10 z" ></path>]
+
     const hideOnclick = () => {
-        if (hideStatus) {
-            setBlockWidth(0)
-            setHideStatus(0)
-        } else {
-            if (window.innerWidth < 480) {
-                setBlockWidth('70vw')
+        if (page === 'authors') {
+            if (hideStatus) {
+                setBlockWidth(0)
+                setHideStatus(0)
             } else {
-                setBlockWidth('20vw')
+                if (window.innerWidth < 768) {
+                    setBlockWidth('70vw')
+                } else {
+                    setBlockWidth('20vw')
+                }
+                
+                setHideStatus(1)
             }
-            
-            setHideStatus(1)
+        } else {
+            setCurrentAuthor(null)
+            setButtonText('Музыка')
+            setPage('authors')
         }
+        
+
     }
     const handleMouseEnter = () => {
         setIsHovered(true);
     };
     const authorOnclick = (authorName) => {
         setPage('songs')
+        setButtonText('Назад')
         setCurrentAuthor(authorName)
     };
     const songOnclick = (title, src, authorName) => {
@@ -276,7 +287,7 @@ const Music = ({setAudio, audioRef}) => {
                 className="music-button"
                 onClick={hideOnclick}
             >
-                Музыка
+                {buttonText}
             </button>
             
             <div className="music-pleer">

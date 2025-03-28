@@ -110,25 +110,78 @@ const Music = ({setAudio, audioRef}) => {
         {
             name: 'Буянов',
             songs: [
-
+                {
+                    title: 'Водосточная труба',
+                    src: `${process.env.PUBLIC_URL}/music/Водосточная труба.mp3`
+                },
+                {
+                    title: 'Нам с сетрёнкой каюк',
+                    src: `${process.env.PUBLIC_URL}/music/Нам с сетрёнкой каюк.mp3`
+                },
+                {
+                    title: 'Синяя прица',
+                    src: `${process.env.PUBLIC_URL}/music/Синяя прица.mp3`
+                },
+                {
+                    title: 'Слева справ нас рать',
+                    src: `${process.env.PUBLIC_URL}/music/Слева справ нас рать.mp3`
+                }
             ]
         },
         {
             name: 'Зарядка',
             songs: [
+                {
+                    title: 'F.R.David - Pick Up The Phone',
+                    src: `${process.env.PUBLIC_URL}/music/F. R. David - Pick Up The Phone [1982].mp3`
+                },
+                {
+                    title: 'Men At Work - Down Under',
+                    src: `${process.env.PUBLIC_URL}/music/Men At Work - Down Under [1981].mp3`
+                },
+                {
+                    title: 'Асуллин Альберт - Мальчик с девочкой дружил',
+                    src: `${process.env.PUBLIC_URL}/music/Асуллин Альберт - Мальчик с девочкой дружил [1985].mp3`
+                },
+                {
+                    title: 'Малежик Вячеслав - Двести лет',
+                    src: `${process.env.PUBLIC_URL}/music/Малежик Вячеслав - Двести лет [1984].mp3`
+                },
+                {
+                    title: 'Новиков Александр - Город древний',
+                    src: `${process.env.PUBLIC_URL}/music/Новиков Александр - Город древний [1984].mp3`
+                },
 
             ]
         },
         {
             name: 'Дискотека',
             songs: [
-
+                {
+                    title: 'Depeche Mode – Enjoy The Silence',
+                    src: `${process.env.PUBLIC_URL}/music/Depeche Mode – Enjoy The Silence [1990].mp3`
+                },
+                {
+                    title: 'Europe - The Final Countdown',
+                    src: `${process.env.PUBLIC_URL}/music/Europe - The Final Countdown [1986].mp3`
+                },
+                {
+                    title: 'Radiorama - Yeti',
+                    src: `${process.env.PUBLIC_URL}/music/Radiorama - Yeti [1986].mp3`
+                },
+                {
+                    title: 'София Ротару - Луна-луна',
+                    src: `${process.env.PUBLIC_URL}/music/София Ротару - Луна-луна [1986].mp3`
+                },
             ]
         },
         {
             name: 'Сон',
             songs: [
-
+                {
+                    title: 'Аутогенная тренировка - Мелодии спокойного сна',
+                    src: `${process.env.PUBLIC_URL}/music/03-Аутогенная тренировка - Мелодии спокойного сна (CD).mp3`
+                },
             ]
         },
     ]

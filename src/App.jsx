@@ -5,8 +5,8 @@ import {React, useState, useRef, useEffect} from "react";
 function App() {
   const [page, setPage] = useState('main')
   const [text, setText] = useState('')
-
   const [currentVideo, setCurrentVideo] = useState(1)
+
   const videoSRC = [
     '',
     'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239021&hash=3d35297f17006bbc&autoplay=1',

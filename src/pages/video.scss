@@ -19,7 +19,6 @@
         height: 100%;
         pointer-events: none; 
         z-index: 10;
-
     }
 }
 .video-container2 {
@@ -56,13 +55,9 @@ video {
     pointer-events: none;
     color: #cd1313;
 }
-.video-border img {
-    width: 104%; /* Граница адаптируется к размеру видео */
-    height: 104%;
-}
 @media (max-width: 768px) {
     .video-text__top {
-        margin-top: 100px;
+        margin-top: 0;
         margin-bottom: 50px;
     }
     .video-container2 {
@@ -73,19 +68,19 @@ video {
     }
     video {
         width: 100%;
-        height: auto;
+        height: 80%;
     }
     .video {
         width: 90%;
-
+        
         position: relative;
     }
 }
 @media (max-height: 480px) {
     .video-text__top {
-        font-size: 10vh;
-        line-height: 10vh;
-        margin-top: 10px;
+        font-size: 5vh;
+        line-height: 5vh;
+        margin-top: 0;
         margin-bottom: 10px;
     }
     .video-container2 {
@@ -98,7 +93,7 @@ video {
     }
     video {
         width: 80%;
-
+        height: 80%;
     }
     .video {
         display: flex;

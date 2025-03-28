@@ -27,6 +27,7 @@ const Video = ({src, text, setPage}) => {
                 <div className='video'>
 
                     <VideoPlayer 
+                        
                         ref={videoRef}
                         src={src}
                     />

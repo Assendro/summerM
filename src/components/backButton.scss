@@ -1,7 +1,7 @@
 .backButton {
     position: absolute;
     z-index: 1000;
-    top: 0;
+    top: 5%;
     left: 5%;
     width: 100px;
     height: 50px;
@@ -14,7 +14,7 @@
 
 @media (max-width: 768px) {
     .backButton {
-        top: 90%;
+        top: 85%;
     }
 }
 @media (max-height: 480px) {

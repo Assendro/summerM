@@ -123,13 +123,26 @@ const Music = ({setAudio, audioRef}) => {
                     src: `${process.env.PUBLIC_URL}/music/Нам с сетрёнкой каюк.mp3`
                 },
                 {
-                    title: 'Синяя прица',
-                    src: `${process.env.PUBLIC_URL}/music/Синяя прица.mp3`
-                },
-                {
                     title: 'Слева справ нас рать',
                     src: `${process.env.PUBLIC_URL}/music/Слева справ нас рать.mp3`
                 }
+            ]
+        },
+        {
+            name: 'Веселитский',
+            songs: [
+                {
+                    title: 'Пяти-шестикантропы',
+                    src: `${process.env.PUBLIC_URL}/music/08-Веселитский_Песня_Пяти-шестикантропы_В_Туриянский [Москва, Перово, 22.03.25].mp3`
+                },
+                {
+                    title: 'Синяя Птица 1 вариант',
+                    src: `${process.env.PUBLIC_URL}/music/09-Веселитский - Синяя Птица [Машина Времени] 1 вар.mp3`
+                },
+                {
+                    title: 'Синяя Птица 2 вариант',
+                    src: `${process.env.PUBLIC_URL}/music/10-Веселитский - Синяя Птица [Машина Времени] 2 вар.mp3`
+                },
             ]
         },
         {

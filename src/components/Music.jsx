@@ -14,12 +14,9 @@ const Music = ({setAudio, audioRef}) => {
     const [page, setPage] = useState('authors')
     const [playStatus, setPlayStatus] = useState(0)
     const [blockWidth, setBlockWidth] = useState(0)
-    const [isHovered, setIsHovered] = useState(false);
-    const [topIndent, setTopIndent] = useState(0);
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
     const blockRef = useRef(null);
-    const [height, setHeight] = useState(0);
 
     const [currentAuthor, setCurrentAuthor] = useState(null);
     const [currentSong, setCurrentSong] = useState({
@@ -218,9 +215,6 @@ const Music = ({setAudio, audioRef}) => {
         
 
     }
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
     const authorOnclick = (authorName) => {
         setPage('songs')
         setButtonText('Назад')
@@ -249,31 +243,12 @@ const Music = ({setAudio, audioRef}) => {
         }
     }
 
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
 
-    const handleScroll = (event) => {
-        if (isHovered) {
-            const offset = 480 - height
-
-            setTopIndent((prev) => {
-                if (prev - event.deltaY / 4 > 0 || prev - event.deltaY / 4 < offset) {
-                    return prev
-                }
-                return prev - event.deltaY / 4
-            })
-
-        }
-    }
     let content;
     switch (page) {
         case 'authors':
             content = 
                 <div className="authors"
-                    style={{
-                        top: topIndent
-                    }}
                     ref={blockRef} 
                 >
                     {songsArray.map((author, index) => (
@@ -286,9 +261,6 @@ const Music = ({setAudio, audioRef}) => {
         case 'songs':
             content = 
                 <div className="songs"
-                    style={{
-                        top: topIndent
-                    }}
                     ref={blockRef} 
                 >
                     {songsArray.map((author) => {
@@ -326,19 +298,9 @@ const Music = ({setAudio, audioRef}) => {
             audio.removeEventListener('timeupdate', handleTimeUpdate);
         }
     }, [audioRef])
-    useEffect(() => {
-        if (blockRef.current) {
-            console.log(blockRef.current.offsetHeight)
-            setHeight(blockRef.current.offsetHeight);
-        }
-    }, [currentAuthor]);
-
 
     return (
         <div className="music-container"                 
-            onWheel={handleScroll}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             style={{
             width: blockWidth
             }}

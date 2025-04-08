@@ -10,7 +10,7 @@ const BackButton = ({setPage}) => {
             className='backButton'
             onClick={handleOnClick}
         >
-            &lt; Назад 
+            НАЗАД 
         </button>
     )
 }

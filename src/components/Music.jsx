@@ -204,7 +204,9 @@ const Music = ({setAudio, audioRef}) => {
             if (hideStatus) {
                 setBlockWidth(0)
                 setHideStatus(0)
+                setButtonText('НАШИ ПЕСНИ')
             } else {
+                setButtonText('НАЗАД')
                 if (window.innerWidth < 768) {
                     setBlockWidth('70vw')
                 } else {
@@ -215,7 +217,6 @@ const Music = ({setAudio, audioRef}) => {
             }
         } else {
             setCurrentAuthor(null)
-            setButtonText('НАШИ ПЕСНИ')
             setPage('authors')
         }
         
@@ -223,7 +224,6 @@ const Music = ({setAudio, audioRef}) => {
     }
     const authorOnclick = (authorName) => {
         setPage('songs')
-        setButtonText('НАЗАД')
         setCurrentAuthor(authorName)
     };
     const songOnclick = (title, src, authorName) => {

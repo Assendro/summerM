@@ -210,7 +210,7 @@ const Music = ({setAudio, audioRef}) => {
                 if (window.innerWidth < 768) {
                     setBlockWidth('70vw')
                 } else {
-                    setBlockWidth('20vw')
+                    setBlockWidth('400px')
                 }
                 
                 setHideStatus(1)

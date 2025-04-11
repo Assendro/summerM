@@ -7,6 +7,7 @@ const Main = ({setCurrentVideo, setPage, setText}) => {
     const [audio, setAudio] = useState(`${process.env.PUBLIC_URL}/music/backgroundMusic.mp3`)
     const audioRef = useRef(null);
 
+
     const bgStyle = {
         backgroundImage: `url(${process.env.PUBLIC_URL}/img/background.jpg)`,
     }
@@ -21,6 +22,7 @@ const Main = ({setCurrentVideo, setPage, setText}) => {
                 setAudio={setAudio}
                 audioRef={audioRef}
             />
+
             <Photos
                 setPage={setPage}
                 setCurrentVideo={setCurrentVideo}

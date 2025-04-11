@@ -10,6 +10,8 @@ const Music = ({setAudio, audioRef}) => {
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
     const blockRef = useRef(null);
+    const [shadowDisplay, setShadowDisplay] = useState('none')
+    
 
     const [currentAuthor, setCurrentAuthor] = useState(null);
     const [currentSong, setCurrentSong] = useState({
@@ -136,6 +138,18 @@ const Music = ({setAudio, audioRef}) => {
                     title: 'Синяя Птица 2 вариант',
                     src: `${process.env.PUBLIC_URL}/music/10-Веселитский - Синяя Птица [Машина Времени] 2 вар.mp3`
                 },
+                {
+                    title: 'Мы пяти шестикантропы',
+                    src: `${process.env.PUBLIC_URL}/music/01_Мы_пяти_шестикантропы_версия_3_10_04_25.mp3`
+                },
+                {
+                    title: 'Пылает за окном зведа',
+                    src: `${process.env.PUBLIC_URL}/music/04-Пылает за окном зведа [10.04.25].mp3`
+                },
+                {
+                    title: 'Спешит моя радость',
+                    src: `${process.env.PUBLIC_URL}/music/05_Спешит_моя_радость_версия_1_10_04_25.mp3`
+                },
             ]
         },
         {
@@ -205,8 +219,10 @@ const Music = ({setAudio, audioRef}) => {
                 setBlockWidth(0)
                 setHideStatus(0)
                 setButtonText('НАШИ ПЕСНИ')
+                setShadowDisplay('none')
             } else {
                 setButtonText('НАЗАД')
+                setShadowDisplay('block')
                 if (window.innerWidth < 768) {
                     setBlockWidth('70vw')
                 } else {
@@ -221,6 +237,14 @@ const Music = ({setAudio, audioRef}) => {
         }
         
 
+    }
+    const handleShadowClick = () => {
+        setBlockWidth(0)
+        setHideStatus(0)
+        setCurrentAuthor(null)
+        setPage('authors')
+        setButtonText('НАШИ ПЕСНИ')
+        setShadowDisplay('none')
     }
     const authorOnclick = (authorName) => {
         setPage('songs')
@@ -306,11 +330,17 @@ const Music = ({setAudio, audioRef}) => {
     }, [audioRef])
 
     return (
-        <div className="music-container"                 
+        <div className="">
+            <div className="music-container__shadow" 
+                onClick={() => {handleShadowClick()}}
+                style={{display: shadowDisplay}}
+            ></div>
+            <div className="music-container"                 
             style={{
             width: blockWidth
             }}
         >
+            
             <button 
                 className="music-button"
                 onClick={hideOnclick}
@@ -351,9 +381,13 @@ const Music = ({setAudio, audioRef}) => {
             <div className="content-container">
                 {content}   
             </div>
-           
+        
 
+            </div>
         </div>
+        
+
+        
     )
 }
 

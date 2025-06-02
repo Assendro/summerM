@@ -12,7 +12,7 @@ function App() {
     'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239021&hash=3d35297f17006bbc&autoplay=1',
     'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239018&hd=2&hash=99a8f1618955d5ed&autoplay=1',
     'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239019&hd=2&hash=55bb73755994333f&autoplay=1',
-    'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239020&hash=89d1e2195f1f213c&autoplay=1'
+    'https://vkvideo.ru/video_ext.php?oid=1032371751&id=456239023&hd=2&hash=c52a369c9e1932a6&autoplay=1'
   ]
 
 
